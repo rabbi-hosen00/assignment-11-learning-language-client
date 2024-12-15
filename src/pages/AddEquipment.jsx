@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+
 
 const AddEquipment = () => {
 
     const { user } = useContext(AuthContext);
-
+    const navigate = useNavigate();
 
     const handleAddCoffee = e => {
         e.preventDefault();
@@ -22,12 +25,27 @@ const AddEquipment = () => {
         const userName = e.target.userName.value;
         const userEmail = e.target.email.value;
 
-        const newCoffee = { image, name, categoryName, description, price, rating, customization, time, stockStatus, userName, userEmail }
-        console.log(newCoffee)
+        const newSports = { image, name, categoryName, description, price, rating, customization, time, stockStatus, userName, userEmail }
+        console.log(newSports)
 
         // send data to the server and database
-
-
+        fetch('http://localhost:5000/sports', {
+            method: "POST",
+            headers: {
+                'content-type': "application/json"
+            },
+            body: JSON.stringify(newSports)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data) {
+                    Swal.fire("Success!", "Sports added successfully!", "success");
+                    navigate("/");
+                } else {
+                    Swal.fire("Error!", "Something went wrong.", "error");
+                }
+            })
     }
 
     return (
