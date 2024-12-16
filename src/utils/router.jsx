@@ -10,6 +10,7 @@ import AllSports from "../components/AllSports";
 import ViewDetails from "../pages/ViewDetails";
 import MyEquipmentList from "../pages/MyEquipmentList";
 import UpdatePage from "../pages/UpdatePage";
+import ErrorPage from "../components/ErrorPage";
 
 
 
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/sports')
+                loader: () => fetch('https://assignment-10-lotas-server.vercel.app/sports')
             },
             {
                 path: "/login",
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
             {
                 path: "/sports/:id",
                 element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/sports/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-10-lotas-server.vercel.app/sports/${params.id}`)
             },
             {
                 path: "/myequipment",
@@ -54,7 +55,11 @@ const router = createBrowserRouter([
             {
                 path: "/update/:id",
                 element: <PrivateRoute> <UpdatePage></UpdatePage></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/sports/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-10-lotas-server.vercel.app/sports/${params.id}`)
+            },
+            {
+                path: "*",
+                element: <ErrorPage></ErrorPage>
             },
         ]
     }

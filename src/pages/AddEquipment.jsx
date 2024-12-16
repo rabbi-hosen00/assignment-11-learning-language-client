@@ -26,10 +26,10 @@ const AddEquipment = () => {
         const userEmail = e.target.email.value;
 
         const newSports = { image, name, categoryName, description, price, rating, customization, time, stockStatus, userName, userEmail }
-        console.log(newSports)
+        // console.log(newSports)
 
         // send data to the server and database
-        fetch('http://localhost:5000/sports', {
+        fetch('https://assignment-10-lotas-server.vercel.app/sports', {
             method: "POST",
             headers: {
                 'content-type': "application/json"
@@ -38,7 +38,7 @@ const AddEquipment = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 if (data) {
                     Swal.fire("Success!", "Sports added successfully!", "success");
                     navigate("/");

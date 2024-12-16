@@ -6,19 +6,19 @@ import { useNavigate } from "react-router-dom";
 
 const AllSports = () => {
     const [sports, setSports] = useState([]);
-    console.log(sports)
+    // console.log(sports)
     const navigate = useNavigate();
 
     // Fetch sports data from the server
     useEffect(() => {
-        fetch("http://localhost:5000/sports")
+        fetch("https://assignment-10-lotas-server.vercel.app/sports")
             .then((res) => res.json())
             .then((data) => setSports(data));
     }, []);
 
     const handleViewDetails = (id) => {
         navigate(`/sports/${id}`);
-        console.log(id)
+        // console.log(id)
     };
 
     return (

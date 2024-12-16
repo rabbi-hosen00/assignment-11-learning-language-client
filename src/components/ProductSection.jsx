@@ -31,7 +31,7 @@ const ProductSection = () => {
             </div>
            </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 mt-5">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 mt-10">
                 {sortedEquipment.map((equipment) => (
                     <SingleSportSection key={equipment._id} equipment={equipment} />
                 ))}

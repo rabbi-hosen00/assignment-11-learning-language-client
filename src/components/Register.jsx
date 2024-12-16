@@ -4,10 +4,11 @@
 import { useContext, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
-    const { createNewUser, setUser, gooleLoagin , updateUserProfile} = useContext(AuthContext);
-    const navigate = useNavigate(); 
+    const { createNewUser, setUser, gooleLoagin, updateUserProfile } = useContext(AuthContext);
+    const navigate = useNavigate();
     const [error, setError] = useState("");
 
 
@@ -30,26 +31,38 @@ const Register = () => {
             setError("Password must contain at least one uppercase letter.");
             return;
         }
-        console.log(name, email, photoURL, password);
+        // console.log(name, email, photoURL, password);
 
         createNewUser(email, password)
             .then((result) => {
                 const user = result.user;
                 setUser(user);
-                alert("user register successfully")
-                updateUserProfile({ displayName : name, photoURL: photoURL})
-                .then(()=>{
-                    navigate("/")
-                })
-                .catch((err)=>{
-                    alert(err)
-                })
+                // alert("user register successfully")
+
+                Swal.fire({
+                    title: "user register successfully !",
+                    icon: "success",
+                    draggable: true
+                });
+                updateUserProfile({ displayName: name, photoURL: photoURL })
+                    .then(() => {
+                        navigate("/")
+                    })
+                    .catch((err) => {
+                        alert(err)
+                    })
                 navigate("/");
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert("user already register")
+                // alert("user already register")
+                Swal.fire({
+                    icon: "error",
+                    title: "user already register",
+                    text: "Something went wrong!",
+
+                });
                 console.error(errorCode, errorMessage);
             });
     };
@@ -59,13 +72,23 @@ const Register = () => {
             .then((result) => {
                 const user = result.user;
                 setUser(user);
-                alert("user register successfully")
+                // alert("user register successfully")
+                Swal.fire({
+                    title: "user register successfully !",
+                    icon: "success",
+                    draggable: true
+                });
                 navigate(location?.state?.from?.pathname || "/"); // Redirect to previous page or home
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert("user already register")
+                // alert("user already register")
+                Swal.fire({
+                    icon: "error",
+                    title: "user already register",
+                    text: "Something went wrong!",
+                });
                 console.error(errorCode, errorMessage);
             });
     };

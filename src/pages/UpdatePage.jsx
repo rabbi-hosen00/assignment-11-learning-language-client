@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 const UpdatePage = () => {
   const sports = useLoaderData();
-  console.log(sports);
+  // console.log(sports);
 
   const nevagate = useNavigate()
 
@@ -23,9 +23,9 @@ const UpdatePage = () => {
       price: e.target.price.value,
       rating: e.target.rating.value,
     };
-    console.log(updatedSport);
+    // console.log(updatedSport);
 
-    fetch(`http://localhost:5000/sports/${_id}`, {
+    fetch(`https://assignment-10-lotas-server.vercel.app/sports/${_id}`, {
       method: "PUT", // Correct method for updating
       headers: {
         "Content-Type": "application/json",
@@ -39,7 +39,7 @@ const UpdatePage = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.modifiedCount > 0) {
           Swal.fire("Success!", "Equipment updated successfully!", "success");
           nevagate("/myequipment")

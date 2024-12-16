@@ -1,6 +1,7 @@
 import { useContext, } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 
@@ -8,28 +9,39 @@ import { AuthContext } from "../provider/AuthProvider";
 const Login = () => {
 
     const { userLogin, setUser, gooleLoagin } = useContext(AuthContext)
-    
+
 
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location)
+    // console.log(location)
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log({ email, password })
+        // console.log({ email, password })
 
         userLogin(email, password)
             .then((result) => {
                 const user = result.user;
                 setUser(user)
-                alert("User login successfully login")
+                
+                Swal.fire({
+                    title: "User login successfully !",
+                    icon: "success",
+                    draggable: true
+                });
                 navigate(location?.state ? location.state : "/")
             })
-            .catch((error) => {
-                alert(error.code)
+            .catch(() => {
+                
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Something went wrong!",
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                });
             });
     }
 
@@ -39,11 +51,22 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 setUser(user);
-                alert("User login successfully login")
+                // alert("User login successfully login")
+                Swal.fire({
+                    title: "User login successfully !",
+                    icon: "success",
+                    draggable: true
+                });
                 navigate(location?.state ? location.state : "/"); // Redirect to previous page or home
             })
-            .catch((error) => {
-                alert(error.code);
+            .catch(() => {
+                // alert(error.code);
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Something went wrong!",
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                });
             });
     };
 

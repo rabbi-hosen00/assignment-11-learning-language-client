@@ -9,7 +9,7 @@ const SportsCategory = () => {
 
     // Fetch categories from the backend (replace with actual API endpoint)
     useEffect(() => {
-        fetch("http://localhost:5000/sports")
+        fetch("https://assignment-10-lotas-server.vercel.app/sports")
             .then(res => res.json())
             .then(data => setCategories(data))
             .catch(error => console.error("Error fetching categories:", error));
