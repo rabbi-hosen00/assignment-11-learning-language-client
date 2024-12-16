@@ -22,7 +22,7 @@ const AllSports = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mt-20 mx-auto px-4 py-8">
             <h1 className="text-3xl font-bold text-center mb-6">All Sports Equipment</h1>
 
             <div className="overflow-x-auto">

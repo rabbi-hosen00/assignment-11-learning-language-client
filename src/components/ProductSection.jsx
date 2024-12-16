@@ -1,33 +1,40 @@
 
-// {
-//     "_id": "675c5c59157593d06f6353df",
-//     "image": "rabbi",
-//     "name": "2",
-//     "categoryName": "3",
-//     "description": "4",
-//     "price": "5",
-//     "rating": "6",
-//     "customization": "7",
-//     "time": "22:11",
-//     "stockStatus": "9",
-//     "userName": "rabbi hosen",
-//     "userEmail": "rabbihosen01581@gmail.com"
-// },
+
 
 import { useLoaderData } from "react-router-dom";
+import { useState } from "react";
 import SingleSportSection from "./SingleSportSection";
 
 const ProductSection = () => {
+    const allEquipment = useLoaderData();
+    const [sortedEquipment, setSortedEquipment] = useState(allEquipment);
 
-    const allEquipment = useLoaderData()
-
+    // Sort by ascending price
+    const handleSortAscending = () => {
+        const sorted = [...sortedEquipment].sort((a, b) => a.price - b.price);
+        setSortedEquipment(sorted);
+    };
 
     return (
-        <div className="col-span-9 border-2 border-green-500 p-4 rounded-md">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
-                {
-                    allEquipment.map((equipment) => <SingleSportSection key={equipment._id} equipment={equipment}></SingleSportSection>)
-                }
+        <div className="col-span-9 ">
+           <div className="flex justify-around gap-4">
+            <div>
+                <h2 className="font-extrabold text-5xl text-orange-600 ">sports section</h2>
+            </div>
+           <div className="flex justify-end mb-4">
+                <button
+                    onClick={handleSortAscending}
+                    className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700"
+                >
+                    Sort by Price 
+                </button>
+            </div>
+           </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 mt-5">
+                {sortedEquipment.map((equipment) => (
+                    <SingleSportSection key={equipment._id} equipment={equipment} />
+                ))}
             </div>
         </div>
     );

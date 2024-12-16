@@ -1,42 +1,6 @@
 /* eslint-disable react/prop-types */
 
 
-// const SingleSportSection = ({ equipment }) => {
-//     const {
-//         image,
-//         name,
-//         categoryName,
-//         // description,
-//         price,
-//         rating,
-//         // customization,
-//         // time,
-//         // stockStatus,
-//     } = equipment;
-
-//     return (
-//         <div className="border-2 border-gray-300 p-4 rounded-lg shadow-lg">
-//             <img
-//                 src={image}
-//                 alt={name}
-//                 className="w-full h-48 object-cover rounded-md mb-4"
-//             />
-//             <h2 className="text-xl font-bold">{name}</h2>
-//             <p className="text-gray-600">Category: {categoryName}</p>
-//             {/* <p className="text-gray-700 mt-2">{description}</p> */}
-//             <p className="mt-2 text-lg font-semibold">Price: ${price}</p>
-//             <p className="text-gray-600">Rating: ⭐ {rating}</p>
-//             {/* <p className="text-gray-600">Customization: {customization}</p>
-//             <p className="text-gray-600">Processing Time: {time}</p>
-//             <p className="text-gray-600">Stock Status: {stockStatus}</p> */}
-
-//             <button className="mt-4 w-full btn btn-primary">View Details</button>
-//         </div>
-//     );
-// };
-
-// export default SingleSportSection;
-
 
 
 import { useState } from "react";

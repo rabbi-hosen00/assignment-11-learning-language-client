@@ -48,13 +48,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "/myequipment",
-                element: <MyEquipmentList></MyEquipmentList>,
+                element: <PrivateRoute><MyEquipmentList></MyEquipmentList></PrivateRoute>,
 
             },
             {
-                path: "/update",
-                element: <UpdatePage></UpdatePage>,
-                
+                path: "/update/:id",
+                element: <PrivateRoute> <UpdatePage></UpdatePage></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/sports/${params.id}`)
             },
         ]
     }

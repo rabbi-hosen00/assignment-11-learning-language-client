@@ -2,10 +2,10 @@
 const Banner = () => {
     return (
         <div>
-            <div className="carousel  w-full  sm:h-[60vh] lg:h-[70vh] ">
+            <div className="carousel mt-20 w-full  sm:h-[60vh] lg:h-[70vh] ">
                 <div id="slide1" className="carousel-item relative w-full ">
                     <img
-                        src="https://www.brookdalecc.edu/wp-content/uploads/2023/05/legal2.webp"
+                        src="https://d153a5wkap3yqn.cloudfront.net/cms/2881/4790-main.jpg"
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
@@ -15,7 +15,7 @@ const Banner = () => {
                 </div>
                 <div id="slide2" className="carousel-item relative w-full ">
                     <img
-                        src="https://c8.alamy.com/comp/2NJ169B/career-counseling-text-word-on-white-paper-on-gray-background-2NJ169B.jpg"
+                        src="https://admin.dailycricket.com.bd/storage/posts/10219/Bangladesh-qualify-2022-T20-WC.jpg"
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
@@ -26,7 +26,7 @@ const Banner = () => {
 
                 <div id="slide3" className="carousel-item relative w-full ">
                     <img
-                        src="https://www.manipal.edu/content/dam/manipal/mu/kmc-manipal/images/galleryImage/KMCMpltrial/CareerCounseling.jpg"
+                        src="https://c8.alamy.com/comp/2M59AHP/bangabandhu-asian-central-zone-u-23-mens-international-volleyball-championship-at-the-shaheed-suhrawardy-indoor-stadium-in-mirpur-dhaka-bangladesh-2M59AHP.jpg"
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
