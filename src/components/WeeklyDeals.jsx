@@ -7,7 +7,7 @@ const dealsData = {
   deals: [
     { name: "Tennis Racket", price: 89.99, discount: 30, image: "https://cdn.pixabay.com/photo/2021/06/04/06/54/racket-6308994_640.jpg", link: "/product/4" },
     { name: "Cycling Helmet", price: 69.99, discount: 25, image: "https://i.guim.co.uk/img/media/63ddd858f845f3675c6eda215e74a5bd38e655b8/0_41_3800_2280/master/3800.jpg?width=700&quality=85&auto=format&fit=max&s=f9c23b2487f18ec446f1f254751a2bd7", link: "/product/5" },
-    { name: "Tennis Racket", price: 89.99, discount: 30, image: "https://cdn.pixabay.com/photo/2021/06/04/06/54/racket-6308994_640.jpg", link: "/product/4" },
+    { name: "Cricket Ball", price: 89.99, discount: 30, image: "https://media.istockphoto.com/id/177427917/photo/close-up-of-red-cricket-ball-and-bat-sitting-on-grass.jpg?s=612x612&w=0&k=20&c=DcorerbBUeDNTfld3OclgHxCty4jih2yDCzipffX6zw=", link: "/product/4" },
   ]
 };
 
