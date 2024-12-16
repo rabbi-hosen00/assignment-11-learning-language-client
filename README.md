@@ -3,7 +3,7 @@
 Welcome to *EquiSports*, an e-commerce platform where you can browse and purchase sports equipment and accessories.
 
 ### Live Demo
-Visit the live site here: [Live Demo](https://example.com)  
+Visit the live site here: [Live Demo](https://sports-c4a85.web.app/)  
 (Replace with your actual site URL)
 
 ---
