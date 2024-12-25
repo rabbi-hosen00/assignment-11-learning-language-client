@@ -47,11 +47,19 @@ const NavBar = () => {
                 {/* Logo */}
                 <div className="text-xl font-bold">
                     <Link to="/">
-                        <img
+                        {/* <img
                             src="https://greenwoodhigh.edu.in/wp-content/uploads/2021/03/sports-2-1.jpg.webp"
                             alt="Visa Logo"
                             className="w-12 h-12 rounded-2xl"
-                        />
+                        /> */}
+
+                        <div className="flex items-center space-x-2">
+                            {/* Replace with your logo */}
+                            <img src="https://greenwoodhigh.edu.in/wp-content/uploads/2021/03/sports-2-1.jpg.webp"
+                            
+                            alt="Website Logo" className="h-8 w-8" />
+                            <span className="text-white font-bold text-xl">LearnHub</span>
+                        </div>
                     </Link>
                 </div>
             </div>
@@ -75,29 +83,22 @@ const NavBar = () => {
                     All Sports
                 </NavLink>
                 <NavLink
-                    to="/addequipment"
+                    to="/addtutorials"
                     className={({ isActive }) =>
                         isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
                     }
                 >
-                    Add Equipment
+                    Add Tutorials
                 </NavLink>
                 <NavLink
-                to="/myequipment"
+                    to="/mytutorials"
                     className={({ isActive }) =>
                         isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
                     }
                 >
-                    My Equipment
+                    My Tutorials
                 </NavLink>
-                {/* <NavLink
-                    to="/application"
-                    className={({ isActive }) =>
-                        isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
-                    }
-                >
-                    MyVisaApplications
-                </NavLink> */}
+                
             </div>
 
             {/* Right: Conditional Rendering for User and Logout */}
@@ -180,7 +181,7 @@ const NavBar = () => {
                                 isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
                             }
                         >
-                           All Sports
+                            All Sports
                         </NavLink>
                         <NavLink
                             to="/addequipment"

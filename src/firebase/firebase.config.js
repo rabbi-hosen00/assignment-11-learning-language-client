@@ -1,5 +1,6 @@
 
 
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -7,15 +8,19 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC81oZCxykQOC9YyjSv4jIpok5DefhKxNg",
-  authDomain: "sports-c4a85.firebaseapp.com",
-  projectId: "sports-c4a85",
-  storageBucket: "sports-c4a85.firebasestorage.app",
-  messagingSenderId: "249703128762",
-  appId: "1:249703128762:web:f5a883e9ea7a0813ddac83"
+  apiKey: "AIzaSyCt96-YudJtuha69bofuSkdkQdEuOngaD0",
+  authDomain: "learning-language-127fc.firebaseapp.com",
+  projectId: "learning-language-127fc",
+  storageBucket: "learning-language-127fc.firebasestorage.app",
+  messagingSenderId: "966928572230",
+  appId: "1:966928572230:web:ea0d2ee9e8416149ea4f47"
 };
 
 // Initialize Firebase
-
 const app = initializeApp(firebaseConfig);
+
+
+// const app = initializeApp(firebaseConfig);
 export default app;
+
+

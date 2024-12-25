@@ -2,7 +2,7 @@
 const Banner = () => {
     return (
         <div>
-            <div className="carousel mt-20 w-full  sm:h-[60vh] lg:h-[70vh] ">
+            <div className="carousel mt-16 w-full  sm:h-[60vh] lg:h-[70vh] ">
                 <div id="slide1" className="carousel-item relative w-full ">
                     <img
                         src="https://d153a5wkap3yqn.cloudfront.net/cms/2881/4790-main.jpg"

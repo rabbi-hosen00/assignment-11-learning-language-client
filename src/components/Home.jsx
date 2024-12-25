@@ -1,10 +1,7 @@
-import AllSportsSection from "./AllSportsSection";
+
 import Banner from "./Banner";
-
-
-import Testimonials from "./Testimonials";
-import WeeklyDeals from "./WeeklyDeals";
-// import FeaturedProducts from "./FeatureProducts";
+import CategorySection from "./CategorySection";
+import StartsSection from "./StartsSection";
 
 
 
@@ -12,9 +9,9 @@ const Home = () => {
     return (
         <div >
             <Banner></Banner>
-            <AllSportsSection></AllSportsSection>
-            <Testimonials></Testimonials>
-            <WeeklyDeals></WeeklyDeals>
+            <StartsSection></StartsSection>
+            <CategorySection></CategorySection>
+           
         </div>
     );
 };
