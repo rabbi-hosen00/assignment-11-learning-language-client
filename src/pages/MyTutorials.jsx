@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -52,10 +53,7 @@ const MyTutorials = () => {
     });
   };
 
-  // Handle update tutorial (placeholder function)
-//   const handleUpdate = (id) => {
-//     Swal.fire("Feature Coming Soon!", "The update functionality is under construction.", "info");
-//   };
+ 
 
   return (
     <div className="container mx-auto p-4 mt-16">
@@ -88,18 +86,20 @@ const MyTutorials = () => {
                   </td>
                   <td className="border border-gray-300 px-4 py-2">{lang.language}</td>
                   <td className="border border-gray-300 px-4 py-2">${lang.price}</td>
-                  <td className="border border-gray-300 px-4 py-2">{lang.description.slice(0,15)}...</td>
+                  <td className="border border-gray-300 px-4 py-2">{lang.description.slice(0, 15)}...</td>
                   <td className="border border-gray-300 px-4 py-2">{lang.review}</td>
                   <td className="border border-gray-300 px-4 py-2 flex gap-2">
-                    <button
-                    //   onClick={() => handleUpdate(lang._id)}
-                      className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
-                    >
-                     <FaEdit />
-                    </button>
+                    <Link to={`/updatetorials/${lang._id}`}>
+                      <button
+                        //   onClick={() => handleUpdate(lang._id)}
+                        className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
+                      >
+                        <FaEdit />
+                      </button>
+                    </Link>
                     <button
                       onClick={() => handleDelete(lang._id)}
-                    
+
                       className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
                     >
                       <MdDelete />

@@ -8,6 +8,7 @@ import ErrorPage from "../components/ErrorPage";
 
 import AddTutorials from "../pages/AddTutorials"
 import MyTutorials from "../pages/MyTutorials";
+import UpdateTutorials from "../components/UpdateTutorials";
 
 
 const router = createBrowserRouter([
@@ -37,8 +38,12 @@ const router = createBrowserRouter([
                 path: "/mytutorials",
                 element: <MyTutorials></MyTutorials>
             },
-
-
+            
+            {
+                path: "/updatetorials/:id",
+                element: <UpdateTutorials></UpdateTutorials>,
+                loader: ({ params }) => fetch(`http://localhost:5000/language/${params.id}`)
+            },
 
            
             {
