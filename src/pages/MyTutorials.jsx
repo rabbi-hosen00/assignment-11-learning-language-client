@@ -12,10 +12,12 @@ const MyTutorials = () => {
   const [languages, setLanguages] = useState([]);
   const [loading, setLoading] = useState(true);
 
+
+
   // Fetch tutorials
   useEffect(() => {
     axios
-      .get("http://localhost:5000/language")
+      .get("http://localhost:5000/language/all")
       .then((response) => {
         setLanguages(response.data);
         setLoading(false);
@@ -53,7 +55,8 @@ const MyTutorials = () => {
     });
   };
 
- 
+
+  console.log(languages)
 
   return (
     <div className="container mx-auto p-4 mt-16">

@@ -75,12 +75,12 @@ const NavBar = () => {
                     Home
                 </NavLink>
                 <NavLink
-                    to="/allSports"
+                    to="/findtutors"
                     className={({ isActive }) =>
                         isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
                     }
                 >
-                    All Sports
+                    Find tutors
                 </NavLink>
                 <NavLink
                     to="/addtutorials"
@@ -97,6 +97,14 @@ const NavBar = () => {
                     }
                 >
                     My Tutorials
+                </NavLink>
+                <NavLink
+                    to="/bookedtutors"
+                    className={({ isActive }) =>
+                        isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
+                    }
+                >
+                   Booked Tutor
                 </NavLink>
                 
             </div>

@@ -9,6 +9,10 @@ import ErrorPage from "../components/ErrorPage";
 import AddTutorials from "../pages/AddTutorials"
 import MyTutorials from "../pages/MyTutorials";
 import UpdateTutorials from "../components/UpdateTutorials";
+import FindTutors from "../pages/FindTutors";
+import TutorsDetails from "../pages/TutorsDetails";
+import BookedTutor from "../pages/BookedTutor";
+import FindTutor from "../pages/FindTutor";
 
 
 const router = createBrowserRouter([
@@ -38,6 +42,14 @@ const router = createBrowserRouter([
                 path: "/mytutorials",
                 element: <MyTutorials></MyTutorials>
             },
+            {
+                path: "/find-tutors/:category",
+                element: <FindTutor></FindTutor>
+            },
+            {
+                path: "/findtutors",
+                element: <FindTutors></FindTutors>
+            },
             
             {
                 path: "/updatetorials/:id",
@@ -45,7 +57,16 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/language/${params.id}`)
             },
 
-           
+            {
+                path: "/details/:id",
+                element: <TutorsDetails></TutorsDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/language/${params.id}`)
+            },
+            {
+                path: "/bookedtutors",
+                element: <BookedTutor></BookedTutor>,
+                loader: () => fetch("http://localhost:5000/booked-tutor")
+            },
             {
                 path: "*",
                 element: <ErrorPage></ErrorPage>

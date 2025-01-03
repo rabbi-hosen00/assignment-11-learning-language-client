@@ -1,7 +1,25 @@
 
 
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CategorySection = () => {
+    const [ setLanguages] = useState([]);
+    const navigate = useNavigate();
+
+    // Fetch tutorials
+    useEffect(() => {
+        axios
+            .get("http://localhost:5000/language")
+            .then((response) => {
+                setLanguages(response.data);
+            })
+            .catch((error) => {
+                console.error("Error fetching tutorials:", error);
+            });
+    }, []);
+
     const categories = [
         { name: "English tutors", count: "95 teachers", icon: "🏫" },
         { name: "Spanish tutors", count: "56 teachers", icon: "🏰" },
@@ -20,12 +38,13 @@ const CategorySection = () => {
                 <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center">
                     Category Section
                 </h2>
-                <p className="text-center mb-5">Helps students quickly find the desired tutors for subjects like English, Math, or Science.</p>
+                <p className="text-center mb-5">Find tutors for various languages quickly!</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {categories.map((category, index) => (
                         <div
                             key={index}
-                            className="flex items-center justify-between bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition-shadow duration-200"
+                            onClick={() => navigate(`/find-tutors/${category.name.split(" ")[0].toLowerCase()}`)}
+                            className="cursor-pointer flex items-center justify-between bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition-shadow duration-200"
                         >
                             <div className="flex items-center space-x-3">
                                 <span className="text-3xl">{category.icon}</span>
@@ -46,3 +65,4 @@ const CategorySection = () => {
 };
 
 export default CategorySection;
+
