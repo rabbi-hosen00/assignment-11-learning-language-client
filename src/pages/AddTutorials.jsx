@@ -3,11 +3,13 @@ import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+
+import useAxiosSecur from "../components/useAxiosSecur";
 
 const AddTutorials = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
+  const axiosSecure = useAxiosSecur()
 
   const handleAddTutorial = async (e) => {
     e.preventDefault();
@@ -39,7 +41,7 @@ const AddTutorials = () => {
 
     try {
       // Send data to the server using Axios
-      const response = await axios.post("http://localhost:5000/language", newTutorial, {
+      const response = await axiosSecure.post("/language", newTutorial, {
         headers: {
           "Content-Type": "application/json",
         },

@@ -5,7 +5,7 @@ import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import useAxiosSecur from "../components/useAxiosSecur";
+// import useAxiosSecur from "../components/useAxiosSecur";
 
 
 
@@ -13,12 +13,12 @@ const MyTutorials = () => {
   const [languages, setLanguages] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const axiosSecure = useAxiosSecur()
+  // const axiosSecure = useAxiosSecur()
 
   // Fetch tutorials
   useEffect(() => {
-    axiosSecure
-      .get("/language/all")
+    axios
+      .get("https://assignment-11-larning-language-server.vercel.app/language/all",{withCredentials: true})
       .then((response) => {
         setLanguages(response.data);
         setLoading(false);
@@ -43,7 +43,7 @@ const MyTutorials = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/language/${id}`)
+          .delete(`https://assignment-11-larning-language-server.vercel.app/language/${id}`)
           .then(() => {
             setLanguages(languages.filter((lan) => lan._id !== id));
             Swal.fire("Deleted!", "Your tutorial has been deleted.", "success");
