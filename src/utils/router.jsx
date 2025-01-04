@@ -13,6 +13,7 @@ import FindTutors from "../pages/FindTutors";
 import TutorsDetails from "../pages/TutorsDetails";
 import BookedTutor from "../pages/BookedTutor";
 import FindTutor from "../pages/FindTutor";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -36,11 +37,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addtutorials",
-                element: <AddTutorials></AddTutorials>
+                element: <PrivateRoute><AddTutorials></AddTutorials></PrivateRoute>
             },
             {
                 path: "/mytutorials",
-                element: <MyTutorials></MyTutorials>
+                element: <PrivateRoute><MyTutorials></MyTutorials></PrivateRoute>
             },
             {
                 path: "/find-tutors/:category",
@@ -59,12 +60,12 @@ const router = createBrowserRouter([
 
             {
                 path: "/details/:id",
-                element: <TutorsDetails></TutorsDetails>,
+                element: <PrivateRoute><TutorsDetails></TutorsDetails></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/language/${params.id}`)
             },
             {
                 path: "/bookedtutors",
-                element: <BookedTutor></BookedTutor>,
+                element: <PrivateRoute><BookedTutor></BookedTutor></PrivateRoute>,
                 loader: () => fetch("http://localhost:5000/booked-tutor")
             },
             {

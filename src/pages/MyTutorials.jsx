@@ -5,6 +5,7 @@ import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAxiosSecur from "../components/useAxiosSecur";
 
 
 
@@ -12,12 +13,12 @@ const MyTutorials = () => {
   const [languages, setLanguages] = useState([]);
   const [loading, setLoading] = useState(true);
 
-
+  const axiosSecure = useAxiosSecur()
 
   // Fetch tutorials
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/language/all")
+    axiosSecure
+      .get("/language/all")
       .then((response) => {
         setLanguages(response.data);
         setLoading(false);

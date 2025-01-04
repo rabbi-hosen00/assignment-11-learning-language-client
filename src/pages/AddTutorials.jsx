@@ -174,6 +174,7 @@ const AddTutorials = () => {
                 id="review"
                 name="review"
                 defaultValue="0"
+                readOnly
                 placeholder="Review score"
                 className="input input-bordered"
                 required

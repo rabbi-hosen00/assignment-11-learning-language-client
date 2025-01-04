@@ -57,7 +57,7 @@ const FindTutors = () => {
     // Fetch all tutors
     useEffect(() => {
         axios
-            .get("http://localhost:5000/language/all")
+            .get("http://localhost:5000/language")
             .then((response) => {
                 setLanguages(response.data);
                 setFilteredLanguages(response.data); // Initialize filteredLanguages

@@ -170,6 +170,7 @@ const UpdateTutorials = () => {
                             name="review"
                             defaultValue={review}
                             value={0}
+                            readOnly
                             placeholder="Review score"
                             className="input input-bordered"
                             required

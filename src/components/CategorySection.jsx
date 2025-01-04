@@ -1,11 +1,11 @@
 
-
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const CategorySection = () => {
-    const [ setLanguages] = useState([]);
+    // eslint-disable-next-line no-unused-vars
+    const [ language, setLanguages] = useState([]);
     const navigate = useNavigate();
 
     // Fetch tutorials
@@ -33,7 +33,7 @@ const CategorySection = () => {
     ];
 
     return (
-        <section className="bg-gray-50 py-10">
+        <section className=" py-10 w-11/12 mx-auto">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center">
                     Category Section
