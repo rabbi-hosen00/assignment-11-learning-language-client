@@ -5,8 +5,8 @@ const Banner = () => {
             <div className="carousel mt-16 w-full  sm:h-[60vh] lg:h-[70vh] ">
                 <div id="slide1" className="carousel-item relative w-full ">
                     <img
-                    // src="https://topteacher.com.au/wp-content/uploads/2023/12/tt-home-page-header.jpg"
-                        src="https://png.pngtree.com/thumb_back/fh260/background/20230216/pngtree-female-high-school-teacher-taking-class-image_1564825.jpg"
+                    src="https://topteacher.com.au/wp-content/uploads/2023/12/tt-home-page-header.jpg"
+                        // src="https://png.pngtree.com/thumb_back/fh260/background/20230216/pngtree-female-high-school-teacher-taking-class-image_1564825.jpg"
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">

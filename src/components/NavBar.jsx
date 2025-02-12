@@ -71,7 +71,7 @@ const NavBar = () => {
 
                         <div className="flex items-center space-x-2">
                             {/* Replace with your logo */}
-                            <img src="https://greenwoodhigh.edu.in/wp-content/uploads/2021/03/sports-2-1.jpg.webp"
+                            <img src="https://cdn.vectorstock.com/i/1000v/72/15/child-home-learning-logo-design-learn-online-vector-30927215.jpg"
 
                                 alt="Website Logo" className="h-8 w-8" />
                             <span className="text-white font-bold text-xl">LearnHub</span>
@@ -111,17 +111,17 @@ const NavBar = () => {
                     )
                 }
 
-                
+
                 {
                     user && (
                         <NavLink
-                    to="/mytutorials"
-                    className={({ isActive }) =>
-                        isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
-                    }
-                >
-                    My Tutorials
-                </NavLink>
+                            to="/mytutorials"
+                            className={({ isActive }) =>
+                                isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
+                            }
+                        >
+                            My Tutorials
+                        </NavLink>
                     )
                 }
                 <NavLink

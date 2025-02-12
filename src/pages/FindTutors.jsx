@@ -39,9 +39,9 @@ const FindTutors = () => {
     }
 
     return (
-        <div className="mt-24 w-11/12 mx-auto">
+        <div className="mt-24 w-11/12 mx-auto mb-5">
             {/* Search Bar */}
-            <div className="mb-6 flex items-center justify-center">
+            <div className="mb-6 container flex items-center justify-center">
                 <input
                     type="text"
                     value={searchText}
@@ -52,7 +52,7 @@ const FindTutors = () => {
             </div>
 
             {/* Display Filtered Tutors */}
-            <div className="grid w-11/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid w-11/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
                 {filteredLanguages.length > 0 ? (
                     filteredLanguages.map((lang, idx) => (
                         <LanguageCard key={idx} lang={lang}></LanguageCard>
