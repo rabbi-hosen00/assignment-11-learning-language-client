@@ -111,17 +111,17 @@ const NavBar = () => {
                     )
                 }
 
-
+                
                 {
                     user && (
                         <NavLink
-                            to="/mytutorials"
-                            className={({ isActive }) =>
-                                isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
-                            }
-                        >
-                            My Tutorials
-                        </NavLink>
+                    to="/mytutorials"
+                    className={({ isActive }) =>
+                        isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
+                    }
+                >
+                    My Tutorials
+                </NavLink>
                     )
                 }
                 <NavLink
