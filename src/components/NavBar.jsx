@@ -98,22 +98,32 @@ const NavBar = () => {
                 >
                     Find tutors
                 </NavLink>
-                <NavLink
-                    to="/addtutorials"
-                    className={({ isActive }) =>
-                        isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
-                    }
-                >
-                    Add Tutorials
-                </NavLink>
-                <NavLink
-                    to="/mytutorials"
-                    className={({ isActive }) =>
-                        isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
-                    }
-                >
-                    My Tutorials
-                </NavLink>
+                {
+                    user && (
+                        <NavLink
+                            to="/addtutorials"
+                            className={({ isActive }) =>
+                                isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
+                            }
+                        >
+                            Add Tutorials
+                        </NavLink>
+                    )
+                }
+
+
+                {
+                    user && (
+                        <NavLink
+                            to="/mytutorials"
+                            className={({ isActive }) =>
+                                isActive ? "text-yellow-300 font-bold" : "hover:text-yellow-300"
+                            }
+                        >
+                            My Tutorials
+                        </NavLink>
+                    )
+                }
                 <NavLink
                     to="/bookedtutors"
                     className={({ isActive }) =>
