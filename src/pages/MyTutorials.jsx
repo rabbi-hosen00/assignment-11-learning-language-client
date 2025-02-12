@@ -199,7 +199,7 @@ const MyTutorials = () => {
   
 
   return (
-    <div className="container mx-auto p-4 mt-16">
+    <div className="container mx-auto p-4 mt-16 mb-5">
       <h1 className="text-3xl font-bold text-center text-orange-500 mb-6">My Tutorials</h1>
       
       {/* Sorting Buttons */}
