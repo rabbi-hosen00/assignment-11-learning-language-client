@@ -35,10 +35,10 @@ const CategorySection = () => {
     return (
         <section className=" py-10 w-11/12 mx-auto">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center">
+                <h2 className="text-3xl font-bold text-blue-700 mb-2 text-center">
                     Category Section
                 </h2>
-                <p className="text-center mb-5">Find tutors for various languages quickly!</p>
+                <p className="text-center font-extralight mb-8">Find tutors for various languages quickly!</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {categories.map((category, index) => (
                         <div

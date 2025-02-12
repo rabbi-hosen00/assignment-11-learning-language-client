@@ -19,12 +19,12 @@ const Faq = () => {
     return (
       <section className="py-10 w-11/12 mx-auto">
         <div className="container mx-auto px-4">
-          <h2 className="text-center text-3xl font-bold text-gray-800 mb-8">Frequently Asked Questions</h2>
+          <h2 className="text-center text-3xl font-bold text-blue-700 mb-8">Frequently Asked Questions</h2>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div key={index} className="border-b pb-4">
                 <h3 className="text-xl font-bold text-blue-600">{faq.question}</h3>
-                <p className="text-gray-600 mt-2">{faq.answer}</p>
+                <p className="text-gray-500 font-extralight mt-2">{faq.answer}</p>
               </div>
             ))}
           </div>
