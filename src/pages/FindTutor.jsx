@@ -11,7 +11,7 @@
 
 //     useEffect(() => {
 //         axios
-//             .get(`https://assignment-11-larning-language-server.vercel.app/language?category=${category}`)
+//             .get(`http://localhost:5000/language?category=${category}`)
 //             .then((response) => {
 //                 setTutors(response.data);
 //                 setLoading(false);
@@ -73,7 +73,7 @@ const FindTutor = () => {
     useEffect(() => {
         // Fetch tutors by category
         axios
-            .get(`https://assignment-11-larning-language-server.vercel.app/language?category=${category}`)
+            .get(`http://localhost:5000/language?category=${category}`)
             .then((response) => {
                 setTutors(response.data); // Update state with the fetched data
                 setLoading(false); // Set loading to false
@@ -89,7 +89,7 @@ const FindTutor = () => {
     }
 
     return (
-        <div className="mt-24 container mx-auto px-4 mb-4">
+        <div className="mt-24 w-11/12   mx-auto px-4 mb-4">
             <h2 className="text-2xl font-bold mb-6 capitalize">
                 Tutors for {category}
             </h2>

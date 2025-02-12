@@ -11,7 +11,7 @@ const CategorySection = () => {
     // Fetch tutorials
     useEffect(() => {
         axios
-            .get("https://assignment-11-larning-language-server.vercel.app/language")
+            .get("http://localhost:5000/language")
             .then((response) => {
                 setLanguages(response.data);
             })

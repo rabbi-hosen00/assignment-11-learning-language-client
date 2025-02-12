@@ -31,7 +31,7 @@ const UpdateTutorials = () => {
         console.log("Sending updated data:", updatedTutorial);
 
         // Send PUT request
-        fetch(`https://assignment-11-larning-language-server.vercel.app/language/${_id}`, {
+        fetch(`http://localhost:5000/language/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

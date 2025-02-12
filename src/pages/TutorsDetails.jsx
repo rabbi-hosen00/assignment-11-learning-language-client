@@ -35,7 +35,7 @@ const TutorsDetails = () => {
     console.log("Booking Details:", bookingDetails);
 
     // Simulate sending data to the database
-    fetch("https://assignment-11-larning-language-server.vercel.app/booked-tutor", {
+    fetch("http://localhost:5000/booked-tutor", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -32,7 +32,7 @@ const BookedTutor = () => {
 
 
     return (
-        <div className="mt-20 w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
+        <div className="mt-20 w-11/12 container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
             {
                 bookedTutors?.map((tutors, idx) => <BookTutors key={idx} tutors={tutors}></BookTutors>)
             }

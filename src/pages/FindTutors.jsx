@@ -14,7 +14,7 @@
 //     // Fetch tutorials
 //     useEffect(() => {
 //         axios
-//             .get("https://assignment-11-larning-language-server.vercel.app/language/all")
+//             .get("http://localhost:5000/language/all")
 //             .then((response) => {
 //                 setLanguages(response.data);
 //                 setLoading(false);
@@ -57,7 +57,7 @@ const FindTutors = () => {
     // Fetch all tutors
     useEffect(() => {
         axios
-            .get("https://assignment-11-larning-language-server.vercel.app/language")
+            .get("http://localhost:5000/language")
             .then((response) => {
                 setLanguages(response.data);
                 setFilteredLanguages(response.data); // Initialize filteredLanguages
