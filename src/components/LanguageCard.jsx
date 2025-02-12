@@ -19,7 +19,7 @@ const LanguageCard = ({ lang }) => {
                 <p className="text-xl text-gray-600">Language: {language}</p>
                 <p className="text-sm text-gray-500 mt-2">{description}</p>
                 <Link to={`/details/${_id}`}>
-                    <button className="mt-4 ml-5 px-20 bg-pink-500 text-white  py-2 rounded hover:bg-pink-600 transition">
+                    <button className="mt-4 ml-5 px-20 bg-blue-500 text-white  py-2 rounded hover:bg-pink-600 transition">
                         Details
                     </button>
                 </Link>
