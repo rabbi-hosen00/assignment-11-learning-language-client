@@ -5,6 +5,9 @@ const BookTutors = ({ tutors }) => {
     // eslint-disable-next-line react/prop-types
     const {  image, language, price, userName } = tutors;
     console.log(tutors);
+
+
+    
   
     return (
       <div className="flex justify-center items-center mt-8 px-4 sm:px-6 lg:px-8">

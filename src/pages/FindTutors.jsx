@@ -1,52 +1,9 @@
-// import axios from "axios";
-// import { useEffect, useState } from "react";
-// import LanguageCard from "../components/LanguageCard";
-
-
-// const FindTutors = () => {
-
-
-//     const [languages, setLanguages] = useState([]);
-//     const [setLoading] = useState(true);
-
-
-
-//     // Fetch tutorials
-//     useEffect(() => {
-//         axios
-//             .get("http://localhost:5000/language/all")
-//             .then((response) => {
-//                 setLanguages(response.data);
-//                 setLoading(false);
-//             })
-//             .catch((error) => {
-//                 console.error("Error fetching tutorials:", error);
-//                 setLoading(false);
-//             });
-//     }, []);
-
-
-
-//     return (
-//         <div className="mt-28 w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-4 gap-6 ">
-
-
-//             {
-//                 languages.map((lang, idx) => <LanguageCard key={idx} lang={lang}></LanguageCard>)
-//             }
-
-//         </div>
-//     );
-// };
-
-// export default FindTutors;
-
-
 
 
 import axios from "axios";
 import { useEffect, useState } from "react";
 import LanguageCard from "../components/LanguageCard";
+import Loading from "../components/Loading";
 
 const FindTutors = () => {
     const [languages, setLanguages] = useState([]);
@@ -57,7 +14,7 @@ const FindTutors = () => {
     // Fetch all tutors
     useEffect(() => {
         axios
-            .get("http://localhost:5000/language")
+            .get("https://assignment-11-larning-language-server.vercel.app/language")
             .then((response) => {
                 setLanguages(response.data);
                 setFilteredLanguages(response.data); // Initialize filteredLanguages
@@ -78,7 +35,7 @@ const FindTutors = () => {
     }, [searchText, languages]);
 
     if (loading) {
-        return <div className="text-center mt-10">Loading...</div>;
+        return <Loading></Loading>;
     }
 
     return (

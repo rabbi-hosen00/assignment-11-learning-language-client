@@ -18,7 +18,7 @@
 //   // Fetch tutorials
 //   useEffect(() => {
 //     axios
-//       .get("http://localhost:5000/language/all",{withCredentials: true})
+//       .get("https://assignment-11-larning-language-server.vercel.app/language/all",{withCredentials: true})
 //       .then((response) => {
 //         setLanguages(response.data);
 //         setLoading(false);
@@ -43,7 +43,7 @@
 //     }).then((result) => {
 //       if (result.isConfirmed) {
 //         axios
-//           .delete(`http://localhost:5000/language/${id}`)
+//           .delete(`https://assignment-11-larning-language-server.vercel.app/language/${id}`)
 //           .then(() => {
 //             setLanguages(languages.filter((lan) => lan._id !== id));
 //             Swal.fire("Deleted!", "Your tutorial has been deleted.", "success");
@@ -138,7 +138,7 @@
 //   // Fetch tutorials
 //   useEffect(() => {
 //     axios
-//       .get("http://localhost:5000/language/all", { withCredentials: true })
+//       .get("https://assignment-11-larning-language-server.vercel.app/language/all", { withCredentials: true })
 //       .then((response) => {
 //         setLanguages(response.data);
 //         setLoading(false);
@@ -162,7 +162,7 @@
 //     }).then((result) => {
 //       if (result.isConfirmed) {
 //         axios
-//           .delete(`http://localhost:5000/language/${id}`)
+//           .delete(`https://assignment-11-larning-language-server.vercel.app/language/${id}`)
 //           .then(() => {
 //             setLanguages(languages.filter((lan) => lan._id !== id));
 //             Swal.fire("Deleted!", "Your tutorial has been deleted.", "success");
@@ -312,7 +312,7 @@ const MyTutorials = () => {
   // Fetch tutorials
   useEffect(() => {
     axios
-      .get("http://localhost:5000/language/all", { withCredentials: true })
+      .get("https://assignment-11-larning-language-server.vercel.app/language/all", { withCredentials: true })
       .then((response) => {
         setLanguages(response.data);
         setLoading(false);
@@ -336,7 +336,7 @@ const MyTutorials = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/language/${id}`)
+          .delete(`https://assignment-11-larning-language-server.vercel.app/language/${id}`)
           .then(() => {
             setLanguages(languages.filter((lan) => lan._id !== id));
             Swal.fire("Deleted!", "Your tutorial has been deleted.", "success");

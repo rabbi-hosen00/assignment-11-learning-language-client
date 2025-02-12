@@ -55,18 +55,18 @@ const router = createBrowserRouter([
             {
                 path: "/updatetorials/:id",
                 element: <UpdateTutorials></UpdateTutorials>,
-                loader: ({ params }) => fetch(`http://localhost:5000/language/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-11-larning-language-server.vercel.app/language/${params.id}`)
             },
 
             {
                 path: "/details/:id",
                 element: <PrivateRoute><TutorsDetails></TutorsDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/language/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-11-larning-language-server.vercel.app/language/${params.id}`)
             },
             {
                 path: "/bookedtutors",
                 element: <PrivateRoute><BookedTutor></BookedTutor></PrivateRoute>,
-                loader: () => fetch("http://localhost:5000/booked-tutor")
+                loader: () => fetch("https://assignment-11-larning-language-server.vercel.app/booked-tutor")
             },
             {
                 path: "*",

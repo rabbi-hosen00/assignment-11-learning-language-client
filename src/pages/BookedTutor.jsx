@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import BookTutors from "../components/BookTutors";
 import useAxiosSecur from "../components/useAxiosSecur";
+import Loading from "../components/Loading";
 
 
 const BookedTutor = () => {
@@ -10,7 +11,7 @@ const BookedTutor = () => {
     // console.log(bookedTutors)
   
     const [bookedTutors, setBookedTutors] = useState([]);
-  const [, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const axiosSecure = useAxiosSecur()
 
@@ -29,7 +30,9 @@ const BookedTutor = () => {
   }, []);
  
 
-
+  if (loading) {
+    return <Loading></Loading>;
+}
 
     return (
         <div className="mt-20 w-11/12 container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
