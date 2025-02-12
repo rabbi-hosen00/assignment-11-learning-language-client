@@ -54,7 +54,7 @@ function Footer() {
             <div className="flex justify-center md:justify-start space-x-4">
               <i className="fab fa-facebook-f"></i>
               <i className="fab fa-instagram"></i>
-              <i className="fab fa-twitter"></i>
+              
               <i className="fab fa-youtube"></i>
             </div>
           </div>
